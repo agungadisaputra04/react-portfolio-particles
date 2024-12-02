@@ -1,0 +1,74 @@
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  min-height: calc(100vh - 100px);
+  text-align: center;
+  color: rgb(209, 209, 209);
+  position: relative;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+
+  &__text-wrapper {
+    display: flex;
+    justify-content: center;
+
+    h1 {
+      color: var(--color-slate-300);
+      margin: 0px;
+      font-weight: 500;
+      font-size: 2.5rem;
+      line-height: 3.5rem;
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typingEffectAnimation 2.5s steps(25, end);
+    }
+  }
+
+  &__contact-me {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.2rem;
+    will-change: transform;
+    overflow: hidden;
+
+    button {
+      cursor: pointer;
+      padding: 8px 10px;
+      font-size: 1.4rem;
+      background: transparent;
+      color: var(--color-slate-300);
+      border: 1.5px solid var(--color-slate-300);
+      border-radius: 6px;
+      font-weight: 500;
+
+      &:hover {
+        background: #6302a9;
+        color: var(--color-slate-100);
+      }
+    }
+  }
+}
+
+.home .jobs {
+  color: var(--color-slate-300);
+}
+
+@media screen and (max-width: 768px) {
+  .home__text-wrapper h1 {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
+
+@keyframes typingEffectAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 20ch;
+  }
+}
