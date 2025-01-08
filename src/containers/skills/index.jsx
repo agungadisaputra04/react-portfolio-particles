@@ -12,6 +12,13 @@ import { FaDocker } from "react-icons/fa6";
 import { SiGrafana } from "react-icons/si";
 import { SiSplunk } from "react-icons/si";
 import { motion } from "framer-motion";
+import { DiJavascript } from "react-icons/di";
+import { FaPhp } from "react-icons/fa";
+import { FaPython } from "react-icons/fa";
+import { FaJava } from "react-icons/fa";
+
+
+
 import "./style.scss"; // Import file SCSS
 
 const iconvariants = (duration) => ({
@@ -70,6 +77,43 @@ const Skills = () => {
           ))}
         </motion.div>
       </div>
+
+
+      <div className="skills__content2">
+        <motion.h2
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -100 }}
+          transition={{ duration: 1.5 }}
+          className="skills__title"
+        >
+          Programming
+        </motion.h2>
+        <motion.div
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: 100 }}
+          transition={{ duration: 1.5 }}
+          className="skills__icons"
+        >
+          {[
+            { Icon: DiJavascript, color: "yellow", duration: 2.5 },
+            { Icon: FaPhp, color: "slate", duration: 3 },
+            { Icon: FaPython, color: "blue", duration: 5 },
+            { Icon: FaJava, color: "red", duration: 2 },
+          ].map(({ Icon, color, duration }, index) => (
+            <motion.div
+              key={index}
+              variants={iconvariants(duration)}
+              initial="initial"
+              animate="animate"
+              className={`skills__icon skills__icon--${color}`}
+            >
+              <Icon className="skills__icon-svg" />
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+
+
     </section>
   );
 };

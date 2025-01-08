@@ -1,10 +1,11 @@
 .skills {
-  padding: 4rem 2rem;
+  // padding: 4rem 2rem;
   text-align: center;
 
   &__content {
-    border-bottom: 1px solid rgba(74, 17, 105, 0.986);
-    padding-bottom: 6rem;
+    // border-bottom: 1px solid rgba(74, 17, 105, 0.986);
+    // padding-bottom: 2rem;
+    padding: 2rem;
   }
 
   &__title {
@@ -68,6 +69,9 @@
     }
     &--slate .skills__icon-svg {
       color: #c2c2c2; /* smoth */
+    }
+    &--yellow .skills__icon-svg {
+      color: #e7d31a; /* smoth */
     }
   }
 }

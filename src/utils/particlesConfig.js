@@ -48,7 +48,7 @@ const particleOptions = {
     links: {
       enable: true, // Menghubungkan particles dengan garis
       distance: 150, // Jarak untuk menghubungkan particles
-      color: "#ffffff", // Warna garis penghubung
+      color: "#c2c2", // Warna garis penghubung
       opacity: 0.5, // Transparansi garis
       width: 1, // Lebar garis
     },
