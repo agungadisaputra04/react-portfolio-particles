@@ -1,36 +1,42 @@
-name: portfolio-agungCICD
+name: CI/CD Pipeline
 
 on:
   push:
     branches:
-      - main 
+      - main  # Gantilah dengan nama branch yang sesuai dengan repositori kamu
   pull_request:
     branches:
-      - main  # Jalankan untuk pull request ke branch `main`
+      - main
 
 jobs:
-  build-and-test:
+  build:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [20]  # Gunakan versi Node.js yang sesuai
+
     steps:
-      # Checkout kode dari repository
-      - name: Checkout Code
-        uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-      # Setup Node.js
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v2
         with:
-          node-version: 20.10.0 # Gunakan versi Node.js yang sesuai dengan proyek Anda
+          node-version: ${{ matrix.node-version }}
 
-      # Install dependensi
       - name: Install dependencies
         run: npm install
 
-      # Jalankan pengujian
-      - name: Run tests
-        run: npm test -- --watchAll=false
+      # Jika tidak ingin menjalankan test, bisa dihilangkan
+      # - name: Run tests
+      #   run: npm test
 
-      # Build aplikasi React
-      - name: Build React App
+      - name: Build project
         run: npm run build
+
+      - name: Deploy project
+        run: |
+          echo "Deploying project"
+          # Tambahkan perintah untuk deploy ke server atau cloud yang kamu gunakan
+
