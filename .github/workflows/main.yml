@@ -3,7 +3,7 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main  # Gantilah dengan nama branch yang sesuai dengan repositori kamu
+      - main  # Gantilah dengan nama branch yang sesuai
   pull_request:
     branches:
       - main
