@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8919f40d.css",
+    "main.js": "/static/js/main.552a844b.js",
+    "static/media/port.png": "/static/media/port.8a0f2521210b826c8063.png",
+    "static/media/port2.png": "/static/media/port2.d959692aebffde2e3591.png",
+    "static/media/port1.png": "/static/media/port1.d848a2ec5f49e1b670e9.png",
+    "static/media/bg.jpg": "/static/media/bg.580ac3d597621fc058aa.jpg",
+    "static/media/agungadi.jpg": "/static/media/agungadi.d0bdf82143a412ab4d93.jpg",
+    "index.html": "/index.html",
+    "main.8919f40d.css.map": "/static/css/main.8919f40d.css.map",
+    "main.552a844b.js.map": "/static/js/main.552a844b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8919f40d.css",
+    "static/js/main.552a844b.js"
+  ]
+}
