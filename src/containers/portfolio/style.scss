@@ -1,0 +1,187 @@
+.portfolio{
+    &__content{
+        padding: 20px;
+        width: 100%;
+        
+
+        &__filter{
+            display: inline-block;
+            margin: 0;
+         
+            li{
+                font-size: 16px;
+                display: inline-block;
+                cursor: pointer;
+                position: relative;
+                color: #fff;
+                text-transform: uppercase;
+                padding: 12px 20px;
+                overflow: hidden;
+                &.active{
+                    background: #fff;
+                    color: black;
+                    font-weight: 400;
+
+                }
+                
+}
+}
+
+    &__cards{
+       display: grid;
+       grid-template-columns: repeat(3,1fr);
+       grid-auto-rows: auto;
+       gap: 2rem;
+       margin-top: 10px; 
+
+       &__item{
+        height: 320px;
+        cursor: pointer;
+        position: relative;
+
+        &:hover .overplay{
+            opacity: 1;
+        }
+
+        &__img-wrapper{
+            height: 100%;
+
+            a{
+                height: 100%;
+
+                img{
+                height:inherit ;
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+
+
+       }
+       .overplay{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: 0.5s;
+        transition: opacity 0.5s ease;
+        background-color: rgba(12, 9, 14, 0.904);
+
+        div{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            text-align: center;
+
+            p{
+                color: #fff;
+                margin: 0px;
+                font-size: 2rem;
+                position: relative;
+                overflow: hidden;
+                white-space: nowrap;
+                animation: typingeffect 1s steps(30,end);
+                -webkit-animation: typingeffect 1s steps(30,end);
+}
+
+            button{
+                cursor: pointer;
+                margin-top: 16px;
+                padding: 10px  70px;
+                font-size: 1rem;
+                background: transparent;
+                color: #fff;
+                border: 1.5px solid #fff;
+                border-radius: 4px;
+                font-weight: 500;
+                -webkit-border-radius: 4px;
+                -moz-border-radius: 4px;
+                -ms-border-radius: 4px;
+                -o-border-radius: 4px;
+}
+}
+}
+
+    }
+    }
+    }}
+
+    @media only screen and (max-width: 768px) {
+        .portfolio__content__filter > li {
+          font-size: 14px;
+          padding: 10px 15px;
+        }
+      
+        .portfolio__content__cards {
+          grid-template-columns: repeat(2, 1fr); 
+          gap: 1.5rem;
+        }
+      
+        .portfolio__content__cards__item {
+          height: 320px;
+        }
+      
+        .portfolio__content__cards__item__img-wrapper img {
+          object-fit: contain; 
+        }
+      }
+      
+      @media only screen and (max-width: 480px) {
+        .portfolio__content__filter > li {
+          font-size: 12px;
+          padding: 8px 10px;
+        }
+      
+        .portfolio__content__cards {
+          grid-template-columns: repeat(1, 1fr); 
+          gap: 1rem;
+        }
+      
+        .portfolio__content__cards__item {
+          height: 280px;
+        }
+      
+        .portfolio__content__cards__item__img-wrapper img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      
+      @media only screen and (max-width: 320px) {
+        .portfolio__content__filter > li {
+          font-size: 10px;
+          padding: 6px 8px;
+        }
+      
+        .portfolio__content__cards__item {
+          height: 240px; 
+        }
+      
+        .portfolio__content__cards__item__img-wrapper img {
+          height: auto;
+          width: 100%;
+        }
+      
+        .portfolio__content__filter {
+          text-align: center; 
+        }
+      }
+      
+
+    @keyframes typingeffect{
+        from{
+            width: 0;
+        }
+        to{
+            width: 100%;
+        }
+    }

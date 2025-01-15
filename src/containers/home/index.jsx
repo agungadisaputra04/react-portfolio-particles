@@ -30,8 +30,14 @@ const Home = () => {
         easeType="ease-in-out"
       >
         <div className="home__contact-me">
-          <button onClick={handleClicktoPages}>Hire me</button>
+          <button className="glow-on-hover" onClick={handleClicktoPages}>Hire Me!</button>
         </div>
+
+        <div>
+          
+        </div>
+
+
       </Animate>
     </section>
   );

@@ -1,0 +1,107 @@
+.resume {
+    height: 100%;
+  }
+  
+  .timeline {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Memastikan elemen tidak overflow */
+  
+    &__experience,
+    &__pendidikan {
+      width: 48%; /* Beri ruang untuk margin pada layar besar */
+      gap: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      &__header {
+        margin: 1rem 0;
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: var(--color-slate-200);
+        text-align: center; /* Pusatkan teks header */
+      }
+  
+      &__vertical-element {
+        padding: 0px 0px 10px 0px;
+  
+        &:last-child {
+          padding-bottom: 0px;
+        }
+      }
+    }
+  }
+  
+  .vertical-timeline::before {
+    width: 2px; /* Kurangi lebar garis vertikal */
+  }
+  
+  .vertical-role {
+    font-size: 1.6rem;
+  }
+  
+  .vertical-company {
+    font-size: 1.1rem;
+    padding-top: 5px;
+  }
+  
+  /* Media Query untuk Layar Lebar */
+  @media (max-width: 1024px) {
+    .timeline {
+      flex-direction: column; /* Ubah tata letak menjadi kolom */
+      align-items: center;
+  
+      &__experience,
+      &__pendidikan {
+        width: 100%; /* Elemen mengambil lebar penuh layar */
+      }
+    }
+  }
+  
+  /* Media Query untuk Layar Tablet */
+  @media (max-width: 768px) {
+    .timeline {
+      padding: 10px;
+  
+      &__experience,
+      &__pendidikan {
+        &__header {
+          font-size: 2rem; /* Kurangi ukuran font header */
+        }
+      }
+    }
+  
+    .vertical-role {
+      font-size: 1.4rem; /* Sesuaikan ukuran teks */
+    }
+  
+    .vertical-company {
+      font-size: 1rem; /* Sesuaikan ukuran teks */
+    }
+  }
+  
+  /* Media Query untuk Layar Ponsel */
+  @media (max-width: 480px) {
+    .timeline {
+      padding: 10px;
+  
+      &__experience,
+      &__pendidikan {
+        &__header {
+          font-size: 1.8rem; /* Kurangi lebih banyak ukuran font header */
+        }
+      }
+    }
+  
+    .vertical-role {
+      font-size: 1.2rem;
+    }
+  
+    .vertical-company {
+      font-size: 0.9rem;
+    }
+  }
+  

@@ -2,17 +2,17 @@ const particleOptions = {
   autoPlay: true,
   background: {
     color: {
-      value: "transparent", // Membuat background particles transparan agar tidak menutupi background CSS
+      value: "transparent", 
     },
-    image: "none", // Tidak menggunakan gambar di background particles
-    position: "50% 50%", // Menempatkan particles di tengah
-    repeat: "no-repeat", // Tidak ada pengulangan
-    size: "cover", // Gambar mengisi layar jika ada
-    opacity: 0, // Mengatur opacity particles menjadi 0 (transparan)
+    image: "none", 
+    position: "50% 50%", 
+    repeat: "no-repeat", 
+    size: "cover", 
+    opacity: 0,
   },
   fullScreen: {
-    enable: true, // Membuat particles tampil fullscreen
-    zIndex: -1, // Particles tampil di bawah konten lainnya
+    enable: true, 
+    zIndex: -1, 
   },
   particles: {
     number: {
@@ -48,7 +48,7 @@ const particleOptions = {
     links: {
       enable: true, // Menghubungkan particles dengan garis
       distance: 150, // Jarak untuk menghubungkan particles
-      color: "#ffffff", // Warna garis penghubung
+      color: "#c2c2", // Warna garis penghubung
       opacity: 0.5, // Transparansi garis
       width: 1, // Lebar garis
     },

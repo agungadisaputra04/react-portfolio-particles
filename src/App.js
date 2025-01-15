@@ -3,7 +3,7 @@ import "./App.scss";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./containers/home";
 import About from "./containers/about";
-import Resume from "./containers/resume";
+import Journey from "./containers/resume";
 import Contact from "./containers/contact";
 import Skills from "./containers/skills";
 import Portfolio from "./containers/portfolio";
@@ -37,7 +37,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/resume" element={<Resume />} />
+          <Route path="/journey" element={<Journey />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/portfolio" element={<Portfolio />} />
